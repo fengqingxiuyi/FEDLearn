@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Bugly报表</title>
+    <script src="jquery-3.2.1.min.js"></script>
+    <!-- 引入 echarts.js -->
+    <script src="node_modules\echarts\dist\echarts.min.js"></script>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="crash" style="width: 800px;height:400px;"></div>
+    <script type="text/javascript">
+        // 同步请求
+        var crashData = JSON.parse($.ajax({url:'./crash.json', async:false}).responseText);
+        // 申明变量
+        var xAxisData = [];
+        var crashUserPercentData = [];
+        var crashNumPercentData = [];
+        var crashNumData = [];
+        var crashUserData = [];
+        // 赋值变量
+        for (var i = 0; i < crashData.length; i++) {
+            xAxisData.push(crashData[i].date);
+            if (crashData[i].crashUser === -1) {
+                crashUserPercentData.push(0);
+                crashUserData.push(0);
+            } else {
+                crashUserPercentData.push(Number(crashData[i].crashUser/crashData[i].accessUser*100).toFixed(2));
+                crashUserData.push(crashData[i].crashUser);
+            }
+            if (crashData[i].crashNum === -1) {
+                crashNumPercentData.push(0);
+                crashNumData.push(0);
+            } else {
+                crashNumPercentData.push(Number(crashData[i].crashNum/crashData[i].accessNum*100).toFixed(2));
+                crashNumData.push(crashData[i].crashNum);
+            }
+        }
+        // 基于准备好的dom，初始化echarts实例
+        var crashChart = echarts.init(document.getElementById('crash'));
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: '崩溃率报表'
+            },
+            tooltip : {
+                trigger: 'axis',
+                axisPointer: { // 坐标轴指示器，坐标轴触发有效
+                    type: 'cross',
+                    label: {
+                        backgroundColor: '#6a7985'
+                    }
+                }
+            },
+            legend: {
+                data:['用户崩溃率','次数崩溃率','发生次数','影响用户数']
+            },
+            toolbox: {
+                feature: {
+                    saveAsImage: {}
+                }
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis : [
+                {
+                    type : 'category',
+                    boundaryGap : false,
+                    data : xAxisData
+                }
+            ],
+            yAxis : [
+                {
+                    type : 'value'
+                }
+            ],
+            series : [
+                {
+                    name:'用户崩溃率',
+                    type:'line',
+                    stack: '总量',
+                    areaStyle: {normal: {}},
+                    data:crashUserPercentData
+                },
+                {
+                    name:'次数崩溃率',
+                    type:'line',
+                    stack: '总量',
+                    areaStyle: {normal: {}},
+                    data:crashNumPercentData
+                },
+                {
+                    name:'发生次数',
+                    type:'line',
+                    stack: '总量',
+                    areaStyle: {normal: {}},
+                    data:crashNumData
+                },
+                {
+                    name:'影响用户数',
+                    type:'line',
+                    stack: '总量',
+                    areaStyle: {normal: {}},
+                    data:crashUserData
+                }
+            ]
+        };
+        // 使用刚指定的配置项和数据显示图表。
+        crashChart.setOption(option);
+    </script>
+    <div id="anr" style="width: 800px;height:400px;"></div>
+    <script type="text/javascript">
+        // 同步请求
+        var anrData = JSON.parse($.ajax({url:'./anr.json', async:false}).responseText);
+        // 申明变量
+        var xAxisData = [];
+        var anrUserPercentData = [];
+        var anrNumPercentData = [];
+        var anrNumData = [];
+        var anrUserData = [];
+        // 赋值变量
+        for (var i = 0; i < anrData.length; i++) {
+            xAxisData.push(anrData[i].date);
+            if (anrData[i].crashUser === -1) {
+                anrUserPercentData.push(0);
+                anrUserData.push(0);
+            } else {
+                anrUserPercentData.push(Number(anrData[i].crashUser/anrData[i].accessUser*100).toFixed(2));
+                anrUserData.push(anrData[i].crashUser);
+            }
+            if (anrData[i].crashNum === -1) {
+                anrNumPercentData.push(0);
+                anrNumData.push(0);
+            } else {
+                anrNumPercentData.push(Number(anrData[i].crashNum/anrData[i].accessNum*100).toFixed(2));
+                anrNumData.push(anrData[i].crashNum);
+            }
+        }
+        // 基于准备好的dom，初始化echarts实例
+        var anrChart = echarts.init(document.getElementById('anr'));
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: 'ANR报表'
+            },
+            tooltip : {
+                trigger: 'axis',
+                axisPointer: { // 坐标轴指示器，坐标轴触发有效
+                    type: 'cross',
+                    label: {
+                        backgroundColor: '#6a7985'
+                    }
+                }
+            },
+            legend: {
+                data:['用户ANR率','次数ANR率','发生次数','影响用户数']
+            },
+            toolbox: {
+                feature: {
+                    saveAsImage: {}
+                }
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis : [
+                {
+                    type : 'category',
+                    boundaryGap : false,
+                    data : xAxisData
+                }
+            ],
+            yAxis : [
+                {
+                    type : 'value'
+                }
+            ],
+            series : [
+                {
+                    name:'用户ANR率',
+                    type:'line',
+                    stack: '总量',
+                    areaStyle: {normal: {}},
+                    data:anrUserPercentData
+                },
+                {
+                    name:'次数ANR率',
+                    type:'line',
+                    stack: '总量',
+                    areaStyle: {normal: {}},
+                    data:anrNumPercentData
+                },
+                {
+                    name:'发生次数',
+                    type:'line',
+                    stack: '总量',
+                    areaStyle: {normal: {}},
+                    data:anrNumData
+                },
+                {
+                    name:'影响用户数',
+                    type:'line',
+                    stack: '总量',
+                    areaStyle: {normal: {}},
+                    data:anrUserData
+                }
+            ]
+        };
+        // 使用刚指定的配置项和数据显示图表。
+        anrChart.setOption(option);
+    </script>
+</body>
+</html>

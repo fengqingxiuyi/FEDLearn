@@ -1,0 +1,17 @@
+{
+  "name": "spiderBugly",
+  "version": "1.0.0",
+  "description": "Bugly爬虫",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "fqxyi",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.6.0",
+    "cheerio": "^1.0.0-rc.2",
+    "echarts": "^3.8.5",
+    "superagent": "^3.8.2"
+  }
+}
