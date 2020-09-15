@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/user/index",
+    "pages/webview/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "风清袖一的小程序",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f6f6f6"
+  },
+  "tabBar": {
+    "color": "#777",
+    "selectedColor": "#ff4d61",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "iconPath": "images/tab/tab_home_n.png",
+        "selectedIconPath": "images/tab/tab_home_s.png",
+        "text": "精选文章"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "iconPath": "images/tab/tab_user_n.png",
+        "selectedIconPath": "images/tab/tab_user_s.png",
+        "text": "我"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 20000,
+    "connectSocket": 20000,
+    "uploadFile": 20000,
+    "downloadFile": 20000
+  },
+  "debug": false,
+  "sitemapLocation": "sitemap.json"
+}

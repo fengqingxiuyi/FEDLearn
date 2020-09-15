@@ -1,0 +1,33 @@
+/*颜色定义*/
+.C0{color: #fafafa;}
+.C1{color: #f0f0f0;}
+.C2{color: #dcdcdc;}
+.C3{color: #ccc;}
+.C4{color: #999;}
+.C5{color: #666;}
+.C6{color: #333;}
+.C7{color: #000;}
+.C21{color: #ff4d61;}
+.C22{color: #477ed8;}
+.C23{color: #5ccccc;}
+.C24{color: #3bbc9c;}
+.C25{color: #ff6c00;}
+.C26{color: #119ED7;}
+.C27{color: #FF9C00;}
+/*字号*/
+.F0 {font-size: 10px;}
+.F1 {font-size: 11px;}
+.F2 {font-size: 12px;}
+.F3 {font-size: 13px;}
+.F4 {font-size: 14px;}
+.F5 {font-size: 15px;}
+.F6 {font-size: 16px;}
+.F7 {font-size: 17px;}
+.F8 {font-size: 18px;}
+.F9 {font-size: 19px;}
+.F10{font-size: 20px;}
+.F11{font-size: 21px;}
+.F12{font-size: 22px;}
+.F13{font-size: 23px;}
+.F14{font-size: 24px;}
+.F15{font-size: 25px;}

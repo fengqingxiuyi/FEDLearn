@@ -1,0 +1,22 @@
+/*index.wxss*/
+
+.home {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
+    padding: 40rpx;
+}
+
+.content {
+    margin: 20rpx 0;
+    width: 670rpx;
+    height: 300rpx;
+    background: #ddd;
+    border-radius: 16rpx;
+    font-size: 60rpx;
+    line-height: 300rpx;
+    text-align: center;
+}

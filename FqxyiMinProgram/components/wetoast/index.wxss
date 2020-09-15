@@ -1,0 +1,8 @@
+.wetoast{display:none}
+.wetoast_show{display:block}
+.wetoast__mask{position:fixed;top:0;right:0;bottom:0;left:0;z-index:1000}
+.wetoast_container{position:fixed;top:50%;left:50%;z-index:5000;width:100%;text-align:center;transform:translate3d(-50%,-50%,0);transform-style:preserve-3d}
+.wetoast__bd{display:inline-block;margin:0 auto;padding:15px;max-width:80%;border-radius:5px;background:rgba(0,0,0,.65);color:#FFF;word-wrap:break-word;word-break:break-all}
+.wetoast__bd__img{margin-bottom:10px}
+.wetoast__bd__img_desc{width:35px;height:35px;vertical-align:middle}
+.wetoast__bd__title{font-size:15px}

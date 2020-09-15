@@ -1,0 +1,8 @@
+/** common **/
+@import "styles/common.wxss";
+
+/** components **/
+
+/** pages **/
+@import "pages/home/index.wxss";
+@import "pages/user/index.wxss";

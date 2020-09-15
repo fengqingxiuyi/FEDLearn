@@ -1,0 +1,8 @@
+<!--index.wxml-->
+
+<view class="home">
+    <view class="content" data-openurl="https://www.fqxyi.top/archives/313/" bindtap="click1">Webpack入门</view>
+    <view class="content" data-openurl="https://www.fqxyi.top/archives/311/" bindtap="click2">动态实现应用ICON切换</view>
+    <view class="content" data-openurl="https://www.fqxyi.top/archives/306/" bindtap="click3">实现Electron热更新</view>
+    <view class="content" data-openurl="https://www.fqxyi.top/archives/305/" bindtap="click4">Windows下使用Nginx</view>
+</view>

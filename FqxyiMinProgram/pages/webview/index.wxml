@@ -1,0 +1,3 @@
+<!--index.wxml-->
+
+<web-view src="{{url}}#wechat_redirect"></web-view>

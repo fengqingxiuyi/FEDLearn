@@ -7,6 +7,7 @@
 ```
 FEDLearn
   |--ElectronVueDemo //Electron使用
+  |--FqxyiMinProgram //风清袖一的小程序
   |--WebGLLearn //WebGL学习
   |--WebpackFirst //Webpack入门
   |--.gitignore //Git忽略配置

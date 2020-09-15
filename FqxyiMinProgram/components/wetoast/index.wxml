@@ -1,0 +1,19 @@
+<!-- wetoast.wxml -->
+<template name="wetoast">
+	<view class="wetoast {{reveal ? 'wetoast_show' : ''}}">
+		<view class="wetoast__mask"></view>
+
+		<view class="wetoast_container" animation="{{animationData}}">
+			<view class="wetoast__bd">
+				<block wx:if="{{icon}}">
+					<view class="wetoast__bd__img">
+						<image class="wetoast__bd__img_desc" src="http://s.mamhao.cn/wxapp/mmh_icon_{{icon}}@3x.png" mode="{{imgMode || 'scaleToFill'}}"></image>
+					</view>
+				</block>
+				<block wx:if="{{title}}">
+					<text class="wetoast__bd__title {{titleClassName || ''}}">{{title}}</text>
+				</block>
+			</view>
+		</view>
+	</view>
+</template>
