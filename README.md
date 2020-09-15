@@ -7,6 +7,7 @@
 ```
 FEDLearn
   |--ElectronVueDemo //Electron使用
+  |--FirstVue //Vue学习
   |--FqxyiBlog //借助Taro使用一套代码实现小程序和微商城
   |--FqxyiMinProgram //风清袖一的小程序
   |--SpiderBugly //Bugly爬虫
