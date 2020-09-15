@@ -1,0 +1,22 @@
+// 基础样式
+
+// 基础颜色
+$white: #fff;
+
+// fix 页面默认背景色为白色，并且修改taro默认属性，使自定义的View能撑满容器
+//-------------------------------
+#app {
+    background-color: $white;
+}
+.taro_router {
+    display: flex;
+}
+.taro_page {
+    flex: 1;
+}
+// H5不支持下拉刷新
+.rmc-pull-to-refresh-content {
+  transform: translate3d(0px, 0px, 0px) !important;
+}
+
+

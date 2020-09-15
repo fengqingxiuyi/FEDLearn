@@ -1,0 +1,21 @@
+{
+	"miniprogramRoot": "dist/",
+	"projectname": "fqxyiblog",
+	"description": "风清袖一的博客",
+	"appid": "wx8bd2bc70d8aa2433",
+	"setting": {
+		"urlCheck": false,
+		"es6": false,
+		"postcss": false,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.7.7",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {}
+}
