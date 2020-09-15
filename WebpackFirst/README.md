@@ -19,3 +19,7 @@ WebpackFirst
 1. 进入`WebpackFirst`文件夹，执行`npm install`命令；
 2. 执行`npm run dev`命令；
 3. 查看输出日志，获取运行网址，打开网址`如：http://localhost:8080/`查看效果。
+
+# 博客
+
+[Webpack入门](https://www.fqxyi.top/archives/313/)
